@@ -14,7 +14,7 @@ version = "1.4.0"
 
 # Optional values
 blender_version_max = "5.0.0"
-website = "https://github.com/yourusername/animation-object-tools"
+website = "https://github.com/chrisw225/animation_object_tools"
 copyright = ["2024 Your Name"]
 tags = ["Animation", "Object", "User Interface", "Modeling"]
 platforms = ["windows-x64", "linux-x64", "macos-x64"]
