@@ -1,0 +1,28 @@
+# Blender Extension Manifest
+# This file is required for submission to extensions.blender.org
+
+# Required values
+blender_version_min = "4.2.0"
+id = "animation_object_tools"
+license = ["SPDX:GPL-3.0-or-later"]
+maintainer = "Your Name <your.email@example.com>"
+name = "Animation & Object Tools"
+schema_version = "1.0.0"
+tagline = "NLA strip offset, parent transform fix, and object replacement"
+type = "add-on"
+version = "1.4.0"
+
+# Optional values
+blender_version_max = "5.0.0"
+website = "https://github.com/yourusername/animation-object-tools"
+copyright = ["2024 Your Name"]
+tags = ["Animation", "Object", "User Interface", "Modeling"]
+platforms = ["windows-x64", "linux-x64", "macos-x64"]
+
+# Build configuration
+[build]
+paths = [
+    "__init__.py",
+    "README.md",
+    "test_nla_strip_randomizer.py"
+] 

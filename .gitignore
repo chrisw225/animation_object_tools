@@ -1,0 +1,30 @@
+# Build artifacts
+*.zip
+*.tar.gz
+*.whl
+dist/
+build/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Blender specific
+*.blend1
+*.blend2
+*.blend3 
