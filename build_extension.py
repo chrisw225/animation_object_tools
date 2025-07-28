@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build script for Animation & Object Tools extension
+Build script for Animation Object Tools extension
 This script uses the official Blender command-line tool to build the extension
 """
 
@@ -105,9 +105,21 @@ def validate_manifest():
         return False
     
     try:
-        import tomllib
-        with open("blender_manifest.toml", "rb") as f:
-            manifest = tomllib.load(f)
+        # Try to import tomllib (Python 3.11+)
+        try:
+            import tomllib
+            with open("blender_manifest.toml", "rb") as f:
+                manifest = tomllib.load(f)
+        except ImportError:
+            # Fallback to toml package for older Python versions
+            try:
+                import toml
+                with open("blender_manifest.toml", "r") as f:
+                    manifest = toml.load(f)
+            except ImportError:
+                print("❌ Neither 'tomllib' nor 'toml' package available")
+                print("Please install the 'toml' package: pip install toml")
+                return False
         
         # Check required fields
         required_fields = [
@@ -161,7 +173,7 @@ def check_files():
 
 def main():
     """Main build process"""
-    print("🚀 Animation & Object Tools Extension Builder")
+    print("🚀 Animation Object Tools Extension Builder")
     print("Using official Blender command-line tool")
     print("=" * 60)
     

@@ -1,5 +1,5 @@
 """
-Animation & Object Tools
+Animation Object Tools
 A comprehensive Blender addon for NLA strip manipulation, parent transform fixes, and object replacement.
 
 Copyright (C) 2024 Your Name
@@ -19,7 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
 bl_info = {
-    "name": "Animation & Object Tools",
+    "name": "Animation Object Tools",
     "author": "Your Name",
     "version": (1, 4, 0),
     "blender": (4, 2, 0),
@@ -200,8 +200,8 @@ class NLA_OT_replace_with_instance(Operator):
 
 
 class NLA_PT_strip_randomizer(Panel):
-    """Animation & Object Tools Panel"""
-    bl_label = "Animation & Object Tools"
+    """Animation Object Tools Panel"""
+    bl_label = "Animation Object Tools"
     bl_idname = "NLA_PT_strip_randomizer"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
@@ -258,7 +258,7 @@ class NLA_PT_strip_randomizer(Panel):
 
 
 class NLAStripRandomizerProperties(bpy.types.PropertyGroup):
-    """Properties for Animation & Object Tools"""
+    """Properties for Animation Object Tools"""
     
     offset_method: EnumProperty(
         name="Offset Method",
